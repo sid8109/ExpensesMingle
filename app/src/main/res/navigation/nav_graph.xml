@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginPage2">
+    <fragment
+        android:id="@+id/loginPage2"
+        android:name="com.example.expensesmingle.LoginPage"
+        android:label="LoginPage" >
+        <action
+            android:id="@+id/action_loginPage2_to_signInPage2"
+            app:destination="@id/signInPage2" />
+        <action
+            android:id="@+id/action_loginPage2_to_info2"
+            app:destination="@id/info2" />
+        <action
+            android:id="@+id/action_loginPage2_to_netTransactions"
+            app:destination="@id/netTransactions"
+            app:popUpTo="@id/loginPage2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginPage2_to_info22"
+            app:destination="@id/info2" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInPage2"
+        android:name="com.example.expensesmingle.SignInPage"
+        android:label="SignInPage" >
+        <action
+            android:id="@+id/action_signInPage2_to_netTransactions"
+            app:destination="@id/netTransactions"
+            app:popUpTo="@id/loginPage2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/info2"
+        android:name="com.example.expensesmingle.Info"
+        android:label="Personal Information">
+        <action
+            android:id="@+id/action_info2_to_netTransactions"
+            app:destination="@id/netTransactions"
+            app:popUpTo="@id/loginPage2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/netTransactions"
+        android:name="com.example.expensesmingle.NetTransactions"
+        android:label="Net Settlements">
+        <action
+            android:id="@+id/action_netTransactions_to_loginPage2"
+            app:destination="@id/loginPage2" />
+        <action
+            android:id="@+id/action_netTransactions_to_addExpense2"
+            app:destination="@id/addExpense2" />
+        <action
+            android:id="@+id/action_netTransactions_to_history"
+            app:destination="@id/history" />
+        <action
+            android:id="@+id/action_netTransactions_to_friends2"
+            app:destination="@id/friends2" />
+        <action
+            android:id="@+id/action_netTransactions_to_splitExpenses"
+            app:destination="@id/splitExpenses" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExpense2"
+        android:name="com.example.expensesmingle.AddExpense"
+        android:label="Add Expense">
+        <argument
+            android:name="friend"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.example.expensesmingle.History"
+        android:label="Past Transactions">
+        <argument
+            android:name="friend"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_history_to_addExpense2"
+            app:destination="@id/addExpense2" />
+        <action
+            android:id="@+id/action_history_to_message2"
+            app:destination="@id/message2" />
+    </fragment>
+    <fragment
+        android:id="@+id/friends2"
+        android:name="com.example.expensesmingle.Friends"
+        android:label="Friends" />
+    <fragment
+        android:id="@+id/message2"
+        android:name="com.example.expensesmingle.Message"
+        android:label="Message" />
+    <fragment
+        android:id="@+id/splitExpenses"
+        android:name="com.example.expensesmingle.SplitExpenses"
+        android:label="Split Expenses"
+        tools:layout="@layout/fragment_split_expenses" />
+</navigation>

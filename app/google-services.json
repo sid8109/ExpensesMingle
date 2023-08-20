@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "788928346848",
+    "project_id": "expensesmingle",
+    "storage_bucket": "expensesmingle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788928346848:android:60ef02738f72e0057aae85",
+        "android_client_info": {
+          "package_name": "com.example.expensesmingle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788928346848-5atsfllhhneamd4ivue8s6jmg04f4f09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOgbY-3RGPnldJ52ayTb_U8DyzLbi_wsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788928346848-5atsfllhhneamd4ivue8s6jmg04f4f09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
